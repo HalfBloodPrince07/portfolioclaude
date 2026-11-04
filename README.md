@@ -72,7 +72,7 @@ Debug query params:
 
 `vite.config.js` uses `base: './'`, so the build works both at `https://<user>.github.io/<repo>/` and on a custom domain.
 
-> **Social previews:** LinkedIn, X and Slack need an absolute image URL. Once you know your live URL, change `og.png` in the `og:image` and `twitter:image` meta tags in `index.html` to `https://<your-site>/og.png`.
+> **Social previews:** the `og:image`, `og:url` and `twitter:image` tags in `index.html` point to the live site at https://halfbloodprince07.github.io/portfolioclaude/. Update them if you move to a custom domain.
 
 ## Editing content
 
