@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Narayan Jha — Applied AI Engineer</title>
+  <meta name="description" content="Aditya Narayan Jha — Applied AI Engineer in Bangalore. Multi-agent orchestration (LangGraph), Vision-RAG & hybrid retrieval, TensorRT-LLM inference optimization." />
+  <meta name="theme-color" content="#0b0a12" />
+  <meta property="og:title" content="Aditya Narayan Jha — Applied AI Engineer" />
+  <meta property="og:description" content="I build LLM systems that orchestrate agents, retrieve with vision, and run 3× faster." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aditya Narayan Jha — Applied AI Engineer" />
+  <meta name="twitter:image" content="og.png" />
+  <meta name="author" content="Aditya Narayan Jha" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aditya Narayan Jha",
+    "jobTitle": "Applied AI Engineer",
+    "worksFor": { "@type": "Organization", "name": "Capgemini" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "IN" },
+    "email": "mailto:work.aditya2025@gmail.com",
+    "alumniOf": "PSIT College of Engineering",
+    "award": "Capgemini Gem Award (2024)",
+    "knowsAbout": ["LangGraph", "Multi-agent systems", "Retrieval-augmented generation", "Vision-RAG", "TensorRT-LLM", "Quantization", "FastAPI", "AWS Bedrock"],
+    "sameAs": ["https://linkedin.com/in/adityanj", "https://github.com/HalfBloodPrince07"]
+  }
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b0a12'/><circle cx='32' cy='32' r='10' fill='%23c7b6ff'/><circle cx='32' cy='32' r='20' fill='none' stroke='%23c7b6ff' stroke-opacity='.4' stroke-width='2'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <a class="skip" href="#contact">Skip to contact</a>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__top mono">
+      <span>Aditya Narayan Jha — Portfolio 2026</span>
+      <span data-loader-status>Initialising latent space</span>
+    </div>
+    <div class="loader__count"><span data-loader-count>000</span><sup>%</sup></div>
+    <div class="loader__bar"><i data-loader-bar></i></div>
+    <div class="loader__bottom mono">
+      <span data-loader-log>› loading weights…</span>
+      <span>Bangalore, IN</span>
+    </div>
+  </div>
+
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="atmos" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label"></span></div></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav">
+    <a href="#top" class="nav__logo" data-magnetic aria-label="Back to top">
+      <span class="nav__logo-mark"></span>Aditya <em>Jha</em>
+    </a>
+    <nav class="nav__links mono" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#ask" class="nav__ask">Ask <kbd>⌘K</kbd></a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <button class="nav__toggle mono" data-sound aria-pressed="false" title="Toggle ambient sound">
+        <span class="eq"><i></i><i></i><i></i><i></i></span><span data-sound-label>Sound off</span>
+      </button>
+      <a class="btn btn--pill" href="#contact" data-magnetic><span>Let's talk</span><span class="btn__arrow">↗</span></a>
+      <button class="nav__menu" data-menu aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <div class="menu" data-menu-panel aria-hidden="true">
+    <ol class="menu__list">
+      <li><a href="#top"><span class="mono">01</span>Home</a></li>
+      <li><a href="#about"><span class="mono">02</span>About</a></li>
+      <li><a href="#experience"><span class="mono">03</span>Experience</a></li>
+      <li><a href="#work"><span class="mono">04</span>Work</a></li>
+      <li><a href="#ask"><span class="mono">05</span>Ask my résumé</a></li>
+      <li><a href="#contact"><span class="mono">06</span>Contact</a></li>
+    </ol>
+    <div class="menu__settings mono">
+      <span>Settings</span>
+      <button data-sound aria-pressed="false"><span data-sound-label>Sound off</span></button>
+      <button data-motion aria-pressed="true">Motion on</button>
+      <button data-quality aria-pressed="true">Quality high</button>
+    </div>
+  </div>
+
+  <!-- ============ HUD ============ -->
+  <aside class="hud mono" aria-hidden="true">
+    <div class="hud__left">
+      <div class="hud__row"><span class="hud__key">Layer</span><span data-hud-layer>00</span>/<span>04</span></div>
+      <div class="hud__row hud__title" data-hud-title>Latent space</div>
+      <div class="hud__depth"><i data-hud-progress></i></div>
+    </div>
+    <div class="hud__right">
+      <div class="hud__row"><span class="hud__dot"></span><span data-hud-backend>—</span></div>
+      <div class="hud__row"><span data-hud-particles>0</span> particles</div>
+    </div>
+  </aside>
+
+  <nav class="rail mono" aria-label="Chapters">
+    <a href="#top" data-rail="top"><span>Intro</span><i></i></a>
+    <a href="#about" data-rail="about"><span>Approach</span><i></i></a>
+    <a href="#capabilities" data-rail="capabilities"><span>Capabilities</span><i></i></a>
+    <a href="#lab" data-rail="lab"><span>Inference lab</span><i></i></a>
+    <a href="#experience" data-rail="experience"><span>Experience</span><i></i></a>
+    <a href="#work" data-rail="work"><span>Work</span><i></i></a>
+    <a href="#ask" data-rail="ask"><span>Ask</span><i></i></a>
+    <a href="#recognition" data-rail="recognition"><span>Recognition</span><i></i></a>
+    <a href="#contact" data-rail="contact"><span>Contact</span><i></i></a>
+  </nav>
+
+  <main id="top" data-lenis-root>
+    <!-- ============ HERO ============ -->
+    <section class="hero" data-shape="0" data-title="Latent space" data-gl='{"x":1.7,"y":0.55,"scale":0.82,"mx":0,"my":1.1,"mscale":0.62}'>
+      <div class="hero__meta mono">
+        <span data-reveal-fade>Portfolio — 2026</span>
+        <span data-reveal-fade>3.5 years · LLM systems in production</span>
+        <span data-reveal-fade>Bangalore, IN — <span data-clock>--:--</span> IST</span>
+      </div>
+      <div class="hero__main">
+        <p class="hero__kicker mono" data-reveal-fade>Applied AI Engineer — multi-agent systems,<br/>Vision-RAG and inference optimization</p>
+        <h1 class="hero__title" aria-label="Aditya Narayan Jha">
+          <span class="line"><span class="word it" data-hero-line>Aditya</span></span>
+          <span class="line line--indent"><span class="word" data-hero-line>Narayan Jha</span></span>
+        </h1>
+      </div>
+      <div class="hero__bottom">
+        <p class="hero__lede" data-reveal-fade>
+          I build LLM systems that <em>orchestrate</em> agents, <em>retrieve</em> with vision, and <em>run</em> three times faster — from whiteboard to production.
+        </p>
+        <div class="hero__scroll mono" data-reveal-fade>
+          <span>Scroll to explore</span>
+          <span class="hero__scroll-line"><i></i></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-label="Core stack">
+      <div class="marquee__track" data-marquee>
+        <span>LangGraph</span><i>◦</i><span>Vision-RAG</span><i>◦</i><span>TensorRT-LLM</span><i>◦</i><span>Hybrid Search</span><i>◦</i><span>MCP · A2A</span><i>◦</i><span>AWS Bedrock</span><i>◦</i><span>Quantization</span><i>◦</i><span>FastAPI</span><i>◦</i>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about" data-shape="1" data-title="Agent graph" data-gl='{"x":2.6,"y":0.2,"scale":0.62,"mx":0,"my":-1.4,"mscale":0.5}'>
+      <div class="label mono"><span>01</span> Approach</div>
+      <p class="about__manifesto" data-words>
+        I take complex LLM systems from concept to production. I orchestrate swarms of agents, architect retrieval that actually reads the page, and squeeze every token out of the GPU — then I measure everything, because a demo is not a product.
+      </p>
+
+      <div class="pillars">
+        <article class="pillar" data-tilt>
+          <div class="pillar__num mono">/01</div>
+          <h3>Orchestrate</h3>
+          <p>Multi-agent systems in LangGraph &amp; AWS Strands — planners, critics and tool-users passing messages over MCP and A2A.</p>
+          <span class="pillar__tag mono">5+ → 15+ agents</span>
+        </article>
+        <article class="pillar" data-tilt>
+          <div class="pillar__num mono">/02</div>
+          <h3>Retrieve</h3>
+          <p>Vision-RAG and hybrid search — dense vectors + BM25, cross-encoder reranking, and evaluation with Ragas.</p>
+          <span class="pillar__tag mono">+28% doc accuracy</span>
+        </article>
+        <article class="pillar" data-tilt>
+          <div class="pillar__num mono">/03</div>
+          <h3>Accelerate</h3>
+          <p>TensorRT-LLM compilation, quantization and GPU serving tuning. Faster tokens, smaller bills, same answers.</p>
+          <span class="pillar__tag mono">3× lower latency</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ NUMBERS ============ -->
+    <section class="numbers" aria-label="Impact in numbers">
+      <div class="numbers__grid">
+        <div class="stat"><div class="stat__val"><span data-count="3" data-decimals="0">0</span><sup>×</sup></div><p class="mono">Faster LLM inference<br/>LLaMA · Phi-3 on TensorRT-LLM</p></div>
+        <div class="stat"><div class="stat__val"><span data-count="40">0</span><sup>%</sup></div><p class="mono">Less manual PR review<br/>via LangGraph SDLC agents</p></div>
+        <div class="stat"><div class="stat__val"><span data-count="28">0</span><sup>%</sup></div><p class="mono">Higher document understanding<br/>with Vision-RAG</p></div>
+        <div class="stat"><div class="stat__val"><span data-count="10">0</span><sup>k+</sup></div><p class="mono">Enterprise documents<br/>processed every month</p></div>
+        <div class="stat"><div class="stat__val"><span data-count="30">0</span><sup>%</sup></div><p class="mono">Lift in contextual relevance<br/>ToT · DSP · RAG prompting</p></div>
+        <div class="stat"><div class="stat__val"><span data-count="0" data-final="$0">0</span></div><p class="mono">Cloud API cost<br/>for Vantage, fully local</p></div>
+      </div>
+    </section>
+
+    <!-- ============ CAPABILITIES ============ -->
+    <section class="caps" id="capabilities">
+      <div class="label mono"><span>02</span> What I do</div>
+      <h2 class="h-xl" data-split>Core <span class="it">capabilities</span></h2>
+      <ul class="caps__list" data-caps>
+        <li class="cap" data-cursor="Open">
+          <button class="cap__head" aria-expanded="false">
+            <span class="cap__num mono">001</span><span class="cap__name">LLMs &amp; Agents</span><span class="cap__plus"></span>
+          </button>
+          <div class="cap__body"><div class="chips">
+            <span>LangGraph</span><span>LangChain</span><span>AWS Strands</span><span>MCP</span><span>A2A message passing</span><span>Hugging Face Transformers</span><span>PyTorch</span><span>TensorFlow</span><span>Tree-of-Thought</span><span>Directional Stimulus</span><span>Ragas</span>
+          </div></div>
+        </li>
+        <li class="cap" data-cursor="Open">
+          <button class="cap__head" aria-expanded="false">
+            <span class="cap__num mono">002</span><span class="cap__name">Retrieval &amp; Search</span><span class="cap__plus"></span>
+          </button>
+          <div class="cap__body"><div class="chips">
+            <span>RAG</span><span>Vision-RAG</span><span>Hybrid Search (Vector + BM25)</span><span>Cross-encoder Reranking</span><span>Embeddings</span><span>OpenSearch</span>
+          </div></div>
+        </li>
+        <li class="cap" data-cursor="Open">
+          <button class="cap__head" aria-expanded="false">
+            <span class="cap__num mono">003</span><span class="cap__name">Inference &amp; Optimization</span><span class="cap__plus"></span>
+          </button>
+          <div class="cap__body"><div class="chips">
+            <span>TensorRT-LLM</span><span>Quantization</span><span>Model Compilation</span><span>GPU Serving Tuning</span><span>Ollama</span><span>LM Studio</span><span>Local Multi-GPU Deployment</span>
+          </div></div>
+        </li>
+        <li class="cap" data-cursor="Open">
+          <button class="cap__head" aria-expanded="false">
+            <span class="cap__num mono">004</span><span class="cap__name">Backend &amp; Cloud</span><span class="cap__plus"></span>
+          </button>
+          <div class="cap__body"><div class="chips">
+            <span>Python</span><span>FastAPI</span><span>AWS Bedrock</span><span>Lambda</span><span>S3</span><span>Docker</span><span>Linux</span><span>SQLite</span><span>SQLAlchemy</span><span>Pandas</span><span>NumPy</span>
+          </div></div>
+        </li>
+        <li class="cap" data-cursor="Open">
+          <button class="cap__head" aria-expanded="false">
+            <span class="cap__num mono">005</span><span class="cap__name">Frontend</span><span class="cap__plus"></span>
+          </button>
+          <div class="cap__body"><div class="chips">
+            <span>React</span><span>Vite</span><span>JavaScript / TypeScript</span><span>D3.js</span><span>Server-Sent Events</span><span>HTML5 / CSS3</span>
+          </div></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ INFERENCE LAB ============ -->
+    <section class="lab" id="lab">
+      <div class="label mono"><span>03</span> Inference lab</div>
+      <div class="lab__head">
+        <h2 class="h-lg" data-split>Same model.<br/><span class="it">Three times</span> the speed.</h2>
+        <p class="lab__copy">A toy replay of what TensorRT-LLM compilation + quantization did to LLaMA and Phi-3 serving latency — with near-zero accuracy loss. Hit run.</p>
+      </div>
+      <div class="lab__race">
+        <div class="lane" data-lane="base">
+          <div class="lane__top mono"><span>Baseline · FP16 · eager</span><span><b data-lane-tps>0</b> tok/s</span></div>
+          <div class="lane__out" data-lane-out></div>
+          <div class="lane__bar"><i data-lane-bar></i></div>
+          <div class="lane__foot mono"><span data-lane-time>0.00s</span><span>TTFT 420ms</span></div>
+        </div>
+        <div class="lane lane--fast" data-lane="trt">
+          <div class="lane__top mono"><span>TensorRT-LLM · INT8 · compiled</span><span><b data-lane-tps>0</b> tok/s</span></div>
+          <div class="lane__out" data-lane-out></div>
+          <div class="lane__bar"><i data-lane-bar></i></div>
+          <div class="lane__foot mono"><span data-lane-time>0.00s</span><span>TTFT 140ms</span></div>
+        </div>
+      </div>
+      <button class="btn btn--big" data-lab-run data-magnetic><span>Run inference</span><span class="btn__arrow">▶</span></button>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="exp" id="experience" data-shape="2" data-title="Pipeline" data-gl='{"x":0,"y":2.2,"scale":0.6,"rotX":0.2,"mx":0,"my":2.6,"mscale":0.38}'>
+      <div class="label mono"><span>04</span> Experience</div>
+      <h2 class="h-xl" data-split>Shipping <span class="it">in production</span></h2>
+
+      <article class="job">
+        <div class="job__side">
+          <div class="job__period mono">May 2024 — Present</div>
+          <h3 class="job__role">Applied AI Engineer</h3>
+          <div class="job__co">Capgemini</div>
+          <div class="job__tags mono"><span>LangGraph</span><span>TensorRT-LLM</span><span>Vision-RAG</span><span>Healthcare</span></div>
+        </div>
+        <ol class="job__list">
+          <li data-reveal><span class="mono">01</span><p><b>Engineered and deployed a LangGraph multi-agent framework</b> automating end-to-end SDLC workflows — 5+ specialised agents across code generation, test authoring and PR review, <b class="hl">cutting manual review time by 40%</b>.</p></li>
+          <li data-reveal><span class="mono">02</span><p><b>Accelerated open-source LLM inference by 3×</b> (LLaMA, Phi-3) through TensorRT-LLM compilation and quantization — near-zero accuracy degradation, significant cloud GPU savings.</p></li>
+          <li data-reveal><span class="mono">03</span><p><b>Architected and modernised RAG and Vision-RAG pipelines</b>, lifting document-understanding accuracy by <b class="hl">28%</b> across complex multimodal enterprise data.</p></li>
+          <li data-reveal><span class="mono">04</span><p><b>Built an automated LLM test-generation microservice</b> in Python that parses Go ASTs and emits executable Go test suites — drastically reducing manual QA overhead.</p></li>
+          <li data-reveal><span class="mono">05</span><p><b>Delivered a multi-agent clinical decision support (CDS) system</b> for a healthcare enterprise, accelerating turnaround on critical clinician-facing recommendations.</p></li>
+          <li data-reveal><span class="mono">06</span><p><b>Standardised agentic architecture across 3 enterprise apps</b> with contextual reasoning and task-planning modules for multi-step workflow decomposition.</p></li>
+          <li data-reveal><span class="mono">07</span><p><b>Set cross-domain prompt-engineering &amp; evaluation standards</b>, measurably reducing hallucinations across 4 customer-facing applications.</p></li>
+        </ol>
+      </article>
+
+      <article class="job">
+        <div class="job__side">
+          <div class="job__period mono">Jan 2023 — May 2024</div>
+          <h3 class="job__role">GenAI Engineer</h3>
+          <div class="job__co">NEC India</div>
+          <div class="job__tags mono"><span>Mistral-7B</span><span>Llama-2-13B</span><span>ToT</span><span>Team lead</span></div>
+        </div>
+        <ol class="job__list">
+          <li data-reveal><span class="mono">01</span><p><b>Spearheaded secure document generation &amp; Business Document Connectivity (BDC)</b> systems, scaling pipelines to <b class="hl">10,000+ enterprise documents a month</b>.</p></li>
+          <li data-reveal><span class="mono">02</span><p><b>Engineered Tree-of-Thought, Directional Stimulus and RAG prompting</b> with open-source LLMs (Mistral-7B, Nous-Hermes-Llama-2-13B) — a <b class="hl">30% lift</b> in contextual relevance.</p></li>
+          <li data-reveal><span class="mono">03</span><p><b>Co-led a cross-functional team of 8 engineers</b> integrating LLM features into enterprise apps, accelerating deployment cycles by 15%.</p></li>
+        </ol>
+      </article>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="work" id="work" data-shape="3" data-title="Vector index" data-gl='{"x":0,"y":0,"scale":0.95,"rotX":0,"mx":0,"my":0,"mscale":0.6}'>
+      <div class="label mono"><span>05</span> Selected work</div>
+      <h2 class="h-xl" data-split>Selected <span class="it">projects</span></h2>
+
+      <article class="project" data-cursor="Explore">
+        <div class="project__meta mono">
+          <span class="project__idx">PRJCT /01</span>
+          <dl>
+            <div><dt>Type</dt><dd>Local-first semantic search</dd></div>
+            <div><dt>Scope</dt><dd>15+ agents · 5-tier memory</dd></div>
+            <div><dt>Since</dt><dd>Nov 2025</dd></div>
+          </dl>
+        </div>
+        <div class="project__visual project__visual--graph">
+          <canvas data-graph aria-label="Interactive knowledge graph of Vantage's agents and memory tiers"></canvas>
+          <div class="project__legend mono"><span><i class="c1"></i>Agents</span><span><i class="c2"></i>Memory tiers</span><span><i class="c3"></i>Retrieval</span><span class="hint">drag nodes</span></div>
+        </div>
+        <div class="project__body">
+          <h3 class="project__title">Vantage</h3>
+          <p>A local-first semantic document search platform powered by a <b>15+ agent LangGraph</b> orchestration layer — dynamic intent classification, multi-step reasoning and per-query retrieval strategies.</p>
+          <ul class="project__points">
+            <li>Hybrid retrieval: 768-d dense vectors + BM25, cross-encoder reranking for top-5 precision.</li>
+            <li>Cloud-independent 5-tier memory — session, episodic, procedural, profile, agentic — explored through D3 knowledge graphs.</li>
+            <li>Embeddings, reranking and generation tuned to run on a single consumer GPU via Ollama. Zero cloud API cost.</li>
+          </ul>
+          <div class="chips chips--sm"><span>Python</span><span>FastAPI</span><span>React</span><span>LangGraph</span><span>OpenSearch</span><span>Ollama</span><span>D3.js</span></div>
+        </div>
+      </article>
+
+      <article class="project project--alt" data-cursor="Listen">
+        <div class="project__meta mono">
+          <span class="project__idx">PRJCT /02</span>
+          <dl>
+            <div><dt>Type</dt><dd>Autonomous audio production</dd></div>
+            <div><dt>Scope</dt><dd>Multi-agent · TTS · SSE</dd></div>
+            <div><dt>Since</dt><dd>Nov 2025</dd></div>
+          </dl>
+        </div>
+        <div class="project__visual project__visual--pod">
+          <div class="pod">
+            <ol class="pod__stages mono" data-pod-stages>
+              <li>Research</li><li>Script</li><li>Fact-check</li><li>Sound design</li><li>Qwen TTS</li><li>Export</li>
+            </ol>
+            <canvas data-wave aria-hidden="true"></canvas>
+            <pre class="pod__log mono" data-pod-log aria-live="off"></pre>
+          </div>
+        </div>
+        <div class="project__body">
+          <h3 class="project__title">Podcast <span class="it">Pipeline</span></h3>
+          <p>An autonomous multi-agent production system that turns a topic prompt into a finished podcast — cooperating agents for <b>web research, scriptwriting, fact-checking and sound design</b>.</p>
+          <ul class="project__points">
+            <li>Qwen TTS via local Hugging Face Transformers with dynamic pacing (140–170 WPM) and custom prosody markers.</li>
+            <li>Real-time progress streamed over Server-Sent Events to a React/Vite frontend.</li>
+            <li>Automatic export of MP3 audio, SRT subtitles and timestamped transcripts.</li>
+          </ul>
+          <div class="chips chips--sm"><span>Python</span><span>FastAPI</span><span>React / Vite</span><span>Qwen TTS</span><span>HF Transformers</span><span>LM Studio</span></div>
+        </div>
+      </article>
+
+      <a class="work__more" href="https://github.com/HalfBloodPrince07" target="_blank" rel="noopener" data-cursor="GitHub">
+        <span class="mono">More on GitHub</span>
+        <span class="work__more-big">github.com/<span class="it">HalfBloodPrince07</span> <span class="btn__arrow">↗</span></span>
+      </a>
+    </section>
+
+    <!-- ============ ASK ============ -->
+    <section class="ask" id="ask">
+      <div class="label mono"><span>06</span> Ask my résumé</div>
+      <div class="ask__grid">
+        <div class="ask__intro">
+          <h2 class="h-lg" data-split>Don't read it.<br/><span class="it">Query it.</span></h2>
+          <p class="ask__copy">A small retrieval pipeline running entirely in your browser: BM25 over <span data-ask-count>28</span> résumé passages, query expansion, phrase-aware reranking and grounded answers with citations. No API calls and no LLM. It's the retrieval half of RAG, built properly.</p>
+          <div class="ask__suggest" role="list">
+            <button class="ask__chip" data-ask-q role="listitem">How did you make inference 3× faster?</button>
+            <button class="ask__chip" data-ask-q role="listitem">What's your experience with agents?</button>
+            <button class="ask__chip" data-ask-q role="listitem">Tell me about Vantage</button>
+            <button class="ask__chip" data-ask-q role="listitem">How do you reduce hallucinations?</button>
+            <button class="ask__chip" data-ask-q role="listitem">What awards have you won?</button>
+            <button class="ask__chip" data-ask-q role="listitem">How can I contact you?</button>
+          </div>
+        </div>
+        <div class="console" data-cursor-off>
+          <form class="console__form" data-ask-form>
+            <span class="console__prompt mono" aria-hidden="true">›</span>
+            <input data-ask-input type="text" placeholder="Ask anything about my work…" aria-label="Ask a question about Aditya's résumé" autocomplete="off" spellcheck="false" />
+            <kbd class="mono" aria-hidden="true">⌘K</kbd>
+            <button type="submit" class="console__go" aria-label="Ask">↵</button>
+          </form>
+          <ol class="console__trace mono" aria-label="Retrieval trace">
+            <li data-step="tokenize"><span>Tokenize</span><em data-step-val>—</em></li>
+            <li data-step="expand"><span>Expand</span><em data-step-val>—</em></li>
+            <li data-step="bm25"><span>BM25</span><em data-step-val>—</em></li>
+            <li data-step="rerank"><span>Rerank</span><em data-step-val>—</em></li>
+            <li data-step="compose"><span>Ground</span><em data-step-val>—</em></li>
+          </ol>
+          <div class="console__answer" data-ask-answer aria-live="polite"><span class="console__placeholder">Answers appear here, grounded in my résumé, with sources.</span></div>
+          <ol class="console__sources" data-ask-sources aria-label="Retrieved passages"></ol>
+          <div class="console__meta mono" data-ask-meta>idle · 0 API calls</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECOGNITION ============ -->
+    <section class="rec" id="recognition">
+      <div class="label mono"><span>07</span> Recognition &amp; roots</div>
+      <div class="rec__grid">
+        <div class="award" data-tilt>
+          <div class="award__badge" aria-hidden="true">
+            <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+              <text class="mono"><textPath href="#circ">CAPGEMINI GEM AWARD · 2024 · AGENTIC AI · CAPGEMINI GEM AWARD · 2024 · </textPath></text></svg>
+            <span class="award__gem"></span>
+          </div>
+          <div>
+            <div class="mono award__year">2024</div>
+            <h3>Capgemini Gem Award</h3>
+            <p>For pioneering Agentic AI solutions — advancing multi-agent architectures and enterprise automation.</p>
+          </div>
+        </div>
+        <div class="edu">
+          <div class="mono award__year">2019 — 2023</div>
+          <h3>B.Tech, Information Technology</h3>
+          <p>PSIT College of Engineering</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" data-shape="4" data-title="Hello" data-gl='{"x":0,"y":1.6,"scale":0.95,"mx":0,"my":2.0,"mscale":0.46}'>
+      <div class="label mono"><span>08</span> Contact</div>
+      <p class="contact__kicker">Have an LLM system that needs to ship, scale, or think in graphs? I'd like to hear about it.</p>
+      <a href="mailto:work.aditya2025@gmail.com" class="contact__big" data-magnetic data-cursor="Write">
+        <span class="it">Let's</span> <span>talk</span><span class="btn__arrow">↗</span>
+      </a>
+      <div class="contact__row">
+        <button class="contact__email mono" data-copy="work.aditya2025@gmail.com">
+          <span data-copy-label>work.aditya2025@gmail.com</span><span class="contact__copy">copy</span>
+        </button>
+        <div class="contact__links mono">
+          <a href="https://linkedin.com/in/adityanj" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/HalfBloodPrince07" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="resume.pdf" target="_blank" rel="noopener">Résumé.pdf ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer mono">
+      <span>© 2026 Aditya Narayan Jha</span>
+      <span>Rendered with <span data-hud-backend>WebGPU</span> · three.js · GSAP</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
